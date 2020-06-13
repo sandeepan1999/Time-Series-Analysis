@@ -50,14 +50,28 @@ This step includes removing columns we do not need, check missing values, aggreg
 ## Data Visualisation
 Visualized th data using a method called time-series decomposition that allows us to decompose our time series into three distinct components: trend, seasonality, and noise.
 
-![alt text]
+![alt text](https://github.com/sandeepan1999/Time-Series-Analysis/blob/master/data_visualisation.png)
 
 ## Model Building
-I applied one of the most commonly used method for time-series forecasting, known as ARIMA, which stands for Autoregressive Integrated Moving Average.
+I applied one of the most commonly used method for time-series forecasting, known as ARIMA, which stands for __Autoregressive Integrated Moving Average__.
 
 ARIMA models are denoted with the notation ARIMA(p, d, q). These three parameters account for seasonality, trend, and noise in data.
 
 I validated the forecasts using Root Mean Square Error(RMSE). I chose RMSE because it is easy to interpret.
+
+__Model Performance:__ 151.64
+
+The diagnostic is as follows:
+
+![alt text](https://github.com/sandeepan1999/Time-Series-Analysis/blob/master/diagnostics.png)
+***
+
+Then, I compared the 'furniture' and the 'office sales' categories by fitting them using the __PROPHET__ model. I chose this model because it is designed for analyzing time-series that display patterns on different time scales such as yearly, weekly and daily. It also has advanced capabilities for modeling the effects of holidays on a time-series and implementing custom changepoints.
+
+## Conclusion
+The sales for both furniture and office supplies have been linearly increasing over time although office supplies' growth seems slightly stronger.
+
+The worst month for furniture is April, the worst month for office supplies is November. The best month for furniture is December, and the best month for office supplies is February.
 
 
 
